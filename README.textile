@@ -1,4 +1,4 @@
-h1. Presentation = { :blog => "Hacker" } presentation
+h1. Presentation = { :blog => "Hacker" } 
 
 
 Blog like a Hacker with Jekyll
