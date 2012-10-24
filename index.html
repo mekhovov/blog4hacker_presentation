@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<!--
+Copyright 2011 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Author: Eric Bidelman (ericbidelman@chromium.org)
+        Arne Roomann-Kurrik (kurrik@chromium.org)
+-->
+<html>
+<head>
+  <title>{ :hacker => 'Blog' }</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="description" content="From Noobie to Ruby" />
+  <meta name="keywords" content="ruby, noobie" />
+  <meta name="author" content="Alex Mekhovov">
+
+  <link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+
+  <!-- <link rel="stylesheet" href="css/prettify.css"> -->
+  <link rel="stylesheet" href="css/tomorrow-night-bright.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet/less" type="text/css" href="css/slide-presentation.less">
+  <link rel="stylesheet/less" type="text/css" href="css/slide-content.less">
+  <link rel="stylesheet/less" type="text/css" href="css/style.css?v=1">
+
+</head>
+  <body>
+    <script type="text/html">
+      <!DOCTYPE html>
+      <html>
+        <style>h1 { font:18pt Arial; color: #ccc; text-align: center; }</style>
+        <body>
+          <h1>loading...</h1>
+        </body>
+      </html>
+    </script>
+
+    <!-- <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35520302-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script> -->
+
+    <div id="content" class="hidden">
+      <div id="bg-pattern" class="background"></div>
+      <div id="bg-white" class="background"></div>
+      <div id="bg-black" class="background"></div>
+      <div id="bg-google-blue" class="background"></div>
+      <div id="bg-blueprint" class="background"></div>
+      <div id="bg-google-darkblue" class="background"></div>
+      <div id="bg-google-green" class="background"></div>
+      <div id="bg-google-yellow" class="background"></div>
+      <div id="bg-google-red" class="background"></div>
+      <div id="bg-degree" class="background"></div>
+
+      <div id="slide002_bg" class="background"></div>
+      <div id="bg-ruby" class="background"></div>
+      <div id="bg-ror" class="background"></div>
+      <div id="bg-history" class="background"></div>
+      <div id="bg-japan_vs_usa" class="background"></div>
+      <div id="bg_striped_blue" class="background"></div>
+      <div id="bg_striped_violet" class="background"></div>
+      <div id="bg_striped_grey" class="background"></div>
+
+      <div id="bg_ruby_what_is" class="background"></div>
+      <div id="bg_ruby_light" class="background"></div>
+      <div id="bg_ruby_functional" class="background"></div>
+      <div id="bg_ruby_elegant" class="background"></div>
+      <div id="bg_ruby_dynamic" class="background"></div>
+      <div id="bg_ruby_reflective" class="background"></div>
+      <div id="bg_ruby_os" class="background"></div>
+      <div id="bg_ruby_flexible" class="background"></div>
+      <div id="bg_ruby_language" class="background"></div>
+      <div id="bg_ruby_what_is_2" class="background"></div>
+
+      <div id="bg_scene" class="background"></div>
+      <div id="bg-about_me" class="background"></div>
+
+      <div id="bg-rvm" class="background"></div>
+      <div id="bg-01" class="background"></div>
+      <div id="bg-02" class="background"></div>
+      <div id="bg-05" class="background"></div>
+      <div id="bg-hack" class="background"></div>
+
+<!=========================================== The Beginning ===================================================
+ *
+ * Let's Go, Slides
+ *
+-->
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ *                           ........    1-st slide   ..........
+ *
+-->
+
+<div class="slide transparent centercontents" id="slide-preflight"  data-backgroundid="bg-01">
+  <section class="white_text_large">
+    <h2 style="font-size:65px;font-family:'Cabin Sketch';text-shadow: black 1px 2px 2px; color:orange">Controls</h2>
+    <ul style="font-family:'Cabin Sketch';text-shadow: black 1px 2px 2px;font-size:35px;">
+      <li>Space or <span class="key">&larr;</span> / <span class='key'>&rarr;</span> to move around</li>
+      <li><span class="key">Ctrl/Command</span> / <span class='key'>–</span> or <span class='key'>+</span> to zoom in and out if slides don’t fit</li>
+      <li><span class="key">N</span> to show/hide notes <span class="key">H</span> to highlight elements</li>
+    </ul>
+    <br>
+      <p style="font-family:GoodDog; color:yellow; font-size:50px;text-shadow: black 1px 2px 2px;">If things look good, press <span class="key">→</span> to move on.</p>
+  </section>
+  
+  <br><br><br><br><br><br><br><br><br><br>
+</div>
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ *                           ........    Title   ..........
+ *
+-->
+
+<div class="slide transparent image" data-backgroundid="bg-hack">
+  <div data-build>
+    <section data-auto style="background:none">
+    <span style="margin-left:130px">
+      <div class="topmic">
+        <h1 style="margin-left:100px;margin-top:-20px;font-size:105px;font-family:'Cabin Sketch';text-shadow: black 1px 2px 2px; color:white">{ :hacker => 'Blog' }</h1>
+      </div>
+      
+    </span>
+    </section>
+  </div>
+</div>
+
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ *                           ........    about me   ..........
+ *
+-->
+<div class="slide transparent image" data-backgroundid="bg-about_me">
+  <div data-build>
+    <section data-auto style="background:none">
+    <span style="margin-left:130px;">
+      <div class="topmic">
+        <a style="text-shadow: black 1px 2px 2px; color:orange" href="http://about.me/mekhovov" ><h1 style="margin-left:0px;margin-top:-40px;font-size:65px;font-family:'destroy';text-shadow: black 1px 2px 2px; color:orange">Alexander Mekhovov</h1></a>
+
+        <h1 style="margin-left:0px;margin-top:-10px;font-size:45px;font-family:'GoodDog';text-shadow: black 1px 2px 2px; color:white">Ruby on Rails Developer at <a style="color:yellow; margin-left:10px;" href="http://www.softserveinc.com" target="_blank">SoftServe</a>.</h1>
+
+        <h1 style="margin-left:0px;margin-top:-10px;font-size:45px;font-family:'GoodDog';text-shadow: black 1px 2px 2px; color:white">Co-Organizer and Speaker at <a style="color:yellow; margin-left:10px;" href="http://pacemaker.softserve.ua" target="_blank">Pacemaker - IT Conference</a>.</h1>
+
+        <h1 style="margin-left:0px;margin-top:-10px;font-size:45px;font-family:'GoodDog';text-shadow: black 1px 2px 2px; color:white">Drive Ruby Courses in <a style="color:yellow; margin-left:10px;" href="http://softserve.ua/en/university/it-academy" target="_blank">SoftServe IT Academy</a>.</h1>
+
+          <h1 style="margin-left:0px;margin-top:-10px;font-size:45px;font-family:'GoodDog';text-shadow: black 1px 2px 2px; color:white">Involved in growing <a style="color:yellow; margin-left:10px;" href="http://www.facebook.com/RailsWay" target="_blank">Ruby Community</a> in Dnipro.</h1>
+
+          <h1 style="margin-left:0px;margin-top:-10px;font-size:45px;font-family:'GoodDog';text-shadow: black 1px 2px 2px; color:white">Co-organizer and coach at <a style="color:yellow; margin-left:10px;" href="http://railsgirls.com/dnipropetrovsk" target="_blank">RailsGirls</a> event.</h1>
+
+          <h1 style="margin-left:140px;margin-top:-10px;font-size:45px;font-family:'GoodDog';text-shadow: black 1px 2px 2px; color:white">Speaker at <a style="color:yellow; margin-left:10px;" href="http://ukraine.itweekend.com.ua" target="_blank">IT-Weekend Conference</a>.</h1>
+          
+      </div>
+    </span>
+    <img style="position:absolute; left:0px; bottom:0px; max-height:130px" src="/images/qr.png"></img>
+    </section>
+  </div>
+</div>
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ *                           ........    Agenda   ..........
+ *
+-->
+<!-- <div class="slide transparent centercontents slide-text agenda" id="slide-agenda" data-backgroundid="bg-01">
+  <section>
+    <header>AGENDA</header>
+    <div class="item" style="margin-top: 0px; margin-left:-130px">
+      <img style="width:130px" src="images/ico_ruby.png" />
+      <span class="grintheme" style="margin-bottom: 0px; font-size:55px; font-family:'UglyQua';">What is Ruby ? </span>
+    </div>
+    <div class="item" style="margin-top: 0px; margin-left:-130px">
+      <img style="width:130px" src="images/ico_ruby.png" />
+      <span class="redtheme" style="margin-bottom: 0px; font-size:55px; font-family:'UglyQua';">Ruby Basics</span>
+    </div>
+    <div class="item" style="margin-top: 0px; margin-left:-130px">
+      <img style="width:130px" src="images/ico_ruby.png" />
+      <span class="bluetheme" style="margin-bottom: 0px; font-size:55px; font-family:'UglyQua';">Ruby Advanced</span>
+    </div>
+    <div class="item" style="margin-top: 0px; margin-left:-130px">
+      <img style="width:130px" src="images/ico_ruby.png" />
+      <span class="yellowtheme" style="margin-bottom: 0px; font-size:55px; font-family:'UglyQua';">Ruby Tips and Tricks</span>
+    </div>
+
+  </section>
+</div> -->
+
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * 
+ *
+-->
+<div class="slide transparent centercontents slide-text" data-backgroundid="bg-01">
+  <!--..................... NOTES ......................-->
+          <aside class="note"><section>
+             ...
+          </section></aside>
+  <!--..................... SLIDE ......................-->
+  <header> Meeting <span class="redtheme">Jekyll</span></header>
+  <section>
+
+    Jekyll is a simple, blog aware, static site generator.
+  </section>
+</div>
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * 
+ *
+-->
+<div class="slide transparent centercontents slide-text" data-backgroundid="bg-01">
+  <!--..................... NOTES ......................-->
+          <aside class="note"><section>
+             ...
+          </section></aside>
+  <!--..................... SLIDE ......................-->
+  <header> 
+    <a href="http://jekyllrb.com" target="_blank"><span class="orangetheme">
+      http://<span class="redtheme">jekyll</span>rb.com</span>
+    </a> 
+  </header>
+  <section>
+
+    <img src="images/bg-10.png" style="height:550px;">
+
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * 
+ *
+-->
+<div class="slide transparent centercontents slide-text" data-backgroundid="bg-01">
+  <!--..................... NOTES ......................-->
+          <aside class="note"><section>
+             ...
+          </section></aside>
+  <!--..................... SLIDE ......................-->
+  <header> 
+    <a href="http://octopress.org" target="_blank"><span class="orangetheme">
+      http://<span class="redtheme">octopress</span>.org</span>
+    </a> 
+  </header>
+  <section>
+
+    <img src="images/bg-11.png" style="height:550px;">
+
+  </section>
+</div>
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * 
+ *
+-->
+<div class="slide transparent centercontents slide-text" data-backgroundid="bg-01">
+  <!--..................... NOTES ......................-->
+          <aside class="note"><section>
+             ...
+          </section></aside>
+  <!--..................... SLIDE ......................-->
+  <header> 
+    <a href="http://jekyllbootstrap.com" target="_blank"><span class="orangetheme">
+      http://<span class="redtheme">jekyllbootstrap</span>.com</span>
+    </a> 
+  </header>
+  <section>
+
+    <img src="images/bg-12.png" style="height:550px;">
+
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * 
+ *
+-->
+<div class="slide transparent centercontents slide-text" data-backgroundid="bg-01">
+  <!--..................... NOTES ......................-->
+          <aside class="note"><section>
+             ...
+          </section></aside>
+  <!--..................... SLIDE ......................-->
+  <header> 
+    <a href="http://mekhovov.github.com" target="_blank"><span class="orangetheme">
+      http://<span class="redtheme">mekhovov</span>.github.com</span>
+    </a> 
+  </header>
+  <section>
+
+    <img src="images/bg-13.png" style="height:550px;">
+
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * 
+ *
+-->
+<div class="slide transparent centercontents slide-text" data-backgroundid="bg-01">
+  <!--..................... NOTES ......................-->
+          <aside class="note"><section>
+             ...
+          </section></aside>
+  <!--..................... SLIDE ......................-->
+  <header>Install  <span class="redtheme"> Jekyll-Bootstrap </span> </header>
+  <section>
+
+
+<!-- - - - - - - - - - - - code - - - - - - - - - - - - -->
+
+<pre style="font-size:22px">
+$ git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.com
+
+$ cd USERNAME.github.com
+
+$ git remote set-url origin git@github.com:USERNAME/USERNAME.github.com.git
+
+$ git push origin master
+</pre>
+
+
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * 
+ *
+-->
+<div class="slide transparent centercontents slide-text" data-backgroundid="bg-01">
+  <!--..................... NOTES ......................-->
+          <aside class="note"><section>
+             ...
+          </section></aside>
+  <!--..................... SLIDE ......................-->
+  <header>Jekyll  <span class="redtheme"> Structure </span> </header>
+  <section>
+
+
+<!-- - - - - - - - - - - - code - - - - - - - - - - - - -->
+
+<pre style="font-size:25px">
+.
+|-- _config.yml
+|-- _includes
+|-- _layouts
+|   |-- default.html
+|   |-- post.html
+|-- _posts
+|   |-- 20011-10-25-open-source-is-good.markdown
+|   |-- 20011-04-26-hello-world.markdown
+|-- _site
+|-- index.html
+|-- assets
+    |-- css
+        |-- style.css
+    |-- javascripts
+</pre>
+
+
+  </section>
+</div>
+
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * 
+ *
+-->
+<div class="slide transparent centercontents slide-text" data-backgroundid="bg-01">
+  <!--..................... NOTES ......................-->
+          <aside class="note"><section>
+             ...
+          </section></aside>
+  <!--..................... SLIDE ......................-->
+  <header>Run  <span class="redtheme"> Jekyll </span> </header>
+  <section>
+
+
+<!-- - - - - - - - - - - - code - - - - - - - - - - - - -->
+<pre style="font-size:25px">
+ gem install jekyll
+</pre>
+
+<pre style="font-size:25px">
+
+$ jekyll --server --auto  
+
+</pre>
+
+Your blog is now available at: <a href="http://localhost:4000" target="_blank"> http://localhost:4000/ </a>
+
+
+  </section>
+</div>
+
+
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * 
+ *
+-->
+<div class="slide transparent centercontents slide-text" data-backgroundid="bg-01">
+  <!--..................... NOTES ......................-->
+          <aside class="note"><section>
+             ...
+          </section></aside>
+  <!--..................... SLIDE ......................-->
+  <header>Create a <span class="redtheme"> Post </span> </header>
+  <section>
+
+
+<!-- - - - - - - - - - - - code - - - - - - - - - - - - -->
+<pre style="font-size:25px">
+
+$ rake post title="Hello World"
+
+</pre>
+
+<pre style="font-size:25px">
+# this will create the file: ./_posts/2012-10-24-hello-world.md
+</pre>
+
+
+
+  </section>
+</div>
+
+
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * 
+ *
+-->
+<div class="slide transparent centercontents slide-text" data-backgroundid="bg-01">
+  <!--..................... NOTES ......................-->
+          <aside class="note"><section>
+             ...
+          </section></aside>
+  <!--..................... SLIDE ......................-->
+  <header>Create a <span class="redtheme"> Page </span> </header>
+  <section>
+
+
+<!-- - - - - - - - - - - - code - - - - - - - - - - - - -->
+<pre style="font-size:25px">
+
+$ rake page name="pages/about"
+
+</pre>
+
+<pre style="font-size:25px">
+# this will create the file: ./pages/about/index.html
+</pre>
+
+
+
+  </section>
+</div>
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * 
+ *
+-->
+<div class="slide transparent centercontents slide-text" data-backgroundid="bg-01">
+  <!--..................... NOTES ......................-->
+          <aside class="note"><section>
+             ...
+          </section></aside>
+  <!--..................... SLIDE ......................-->
+  <header><span class="redtheme"> Publish </span> your site</header>
+  <section>
+
+
+<!-- - - - - - - - - - - - code - - - - - - - - - - - - -->
+<pre style="font-size:25px">
+$ git add .
+$ git commit -m "Add new content"
+$ git push origin master
+</pre>
+
+
+<a href="http://USERNAME.github.com" target="_blank">http://USERNAME.github.com</a>
+
+
+
+  </section>
+</div>
+
+
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * 
+ *
+-->
+<div class="slide transparent centercontents slide-text" data-backgroundid="bg-01">
+  <!--..................... NOTES ......................-->
+          <aside class="note"><section>
+             ...
+          </section></aside>
+  <!--..................... SLIDE ......................-->
+  <header>Jekyll<span class="redtheme"> Themes </span> </header>
+  <section>
+
+Examples: <br>
+<a href="http://themes.jekyllbootstrap.com" target="_blank">http://themes.jekyllbootstrap.com</a>
+
+<br><br><br>
+More..<br>
+<a href="http://jekyllbootstrap.com/usage/jekyll-theming.html" target="_blank">http://jekyllbootstrap.com/usage/jekyll-theming.html</a>
+<!-- - - - - - - - - - - - code - - - - - - - - - - - - -->
+
+
+
+
+
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * 
+ *
+-->
+<div class="slide transparent centercontents slide-text" data-backgroundid="bg-01">
+  <!--..................... NOTES ......................-->
+          <aside class="note"><section>
+             ...
+          </section></aside>
+  <!--..................... SLIDE ......................-->
+  <header>Jekyll<span class="redtheme"> Config </span> </header>
+  <section>
+
+
+
+<pre style="font-size:25px">
+
+./_config.yml
+
+</pre>
+
+<br><br>
+
+More.. <br>
+<a href="http://jekyllbootstrap.com/usage/blog-configuration.html" target="_blank">http://jekyllbootstrap.com/usage/blog-configuration.html</a>
+
+
+
+
+
+
+  </section>
+</div>
+
+
+
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ * 
+ *
+-->
+<div class="slide transparent centercontents slide-text" data-backgroundid="bg-01">
+  <!--..................... NOTES ......................-->
+          <aside class="note"><section>
+              ..
+          </section></aside>
+  <!--..................... SLIDE ......................-->
+    <header>Links</header>
+  <section style="font-size:39px">
+
+    
+        <a href="http://jekyllbootstrap.com/lessons/jekyll-introduction.html" target="_blank">• Jekyll Intro</a><br>
+        <a href="https://github.com/mojombo/jekyll/wiki/Sites" target="_blank">• Jekyll sites examples</a><br>
+        <a href="https://github.com/mojombo/jekyll/wiki/Plugins" target="_blank">• Plugins</a><br>
+        <a href="https://github.com/mojombo/jekyll/wiki/Template-Data" target="_blank">• Template Data</a><br>
+        <a href="https://github.com/mojombo/jekyll/wiki/Liquid-Extensions" target="_blank">• Liquid Extensions</a><br>
+      
+      <a href="http://blog4hacker.herokuapp.com" target="_blank">• http://blog4hacker.herokuapp.com</a><br>
+      <a href="https://github.com/mekhovov/blog4hacker_presentation" target="_blank">• This presentation source</a><br>
+      <a href="http://www.htmlfivewow.com/">• http://www.htmlfivewow.com</a>
+
+
+  </section>
+</div>
+
+
+
+
+<!--------------------------------------- Slide  -------------------------------------------------------
+ *
+ *                           ........    QUESTIONS   ..........  
+ *
+-->
+
+<div class="slide transparent image" data-backgroundid="bg-02">
+  <div data-build>
+    <section data-auto style="background:none">
+    <span style="margin-left:130px">
+      <div class="topmic">
+        <h1 style="margin-left:230px;margin-top:200px;font-size:85px;font-family:'UglyQua';text-shadow: #111 2px 4px; color:orange">QUESTIONS ?</h1>
+      </div>
+    </span>
+    </section>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!=========================================== The End ===================================================
+ *
+ * No more Slides
+ *
+-->
+
+    </div>
+    <div id="overlay"></div>
+
+    <script src="js/jquery.js" ></script>
+    <script src="js/libs/less-1.0.41.min.js" async></script>
+    <!--<script src="js/prettify/prettify.js" async></script>
+    <script src="js/prettify/lang-rb.js" async></script>-->
+    <script src="js/highlight.pack.js" ></script>
+<script>
+$(document).ready(function() {
+  hljs.initHighlightingOnLoad();
+  $('pre').each(function(i, e) {hljs.highlightBlock(e)});
+});
+
+</script>
+    <script src="js/libs/glMatrix-0.9.5.min.js" async></script>
+    <script src="js/config.js" defer></script>
+    <!--<script src="socket.io/socket.io.js" defer></script>-->
+    <script src="js/libs/yepnope.1.0.1-min.js" defer></script>
+    <script src="js/slide-presentation.js" defer></script>
+    <script src="js/slide-content.js" defer></script>
+
+
+    <!--[if IE]>
+    <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+    <![endif]-->
+    <div id="background"></div>
+    <div id="stage"></div>
+  </body>
+</html>
+
