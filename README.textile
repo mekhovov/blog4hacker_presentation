@@ -1,10 +1,4 @@
-h1. Presentation = { :noobie => 'Ruby' }
+h1. Presentation = { :blog => "Hacker" } presentation
 
 
-
-Not a boooring Presentation about Ruby and Ruby on Rails
-
-
-
-
-Comming soon ...
+Blog like a Hacker with Jekyll
