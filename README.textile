@@ -2,3 +2,4 @@ h1. Presentation = { :blog => "Hacker" }
 
 
 Blog like a Hacker with Jekyll
+"!https://beerpay.io/mekhovov/blog4hacker_presentation/badge.svg?style=beer-square!":https://beerpay.io/mekhovov/blog4hacker_presentation
